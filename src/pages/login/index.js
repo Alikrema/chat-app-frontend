@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import "./LoginPage.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { signIn } from "../state/auth/authSlice";
-import LoginForm from "./LoginForm";
-import routes from "../shared/constants/routes";
+import { signIn } from "../../state/auth/authSlice";
+import LoginForm from "../../components/login/LoginForm";
+import routes from "../../shared/constants/routes";
 
 const { home } = routes;
 

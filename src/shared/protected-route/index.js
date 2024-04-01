@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
-import LoadingComponent from "../../components/Loading";
+import LoadingComponent from "../../components/common/Loader";
 import routes from "../constants/routes";
 
 const { login } = routes;

@@ -1,6 +1,6 @@
 import React from "react";
-import ChatListPanel from "./ChatListPanel";
-import ChatWindow from "./ChatWindow";
+import ChatListPanel from "../../components/chat/ChatListPanel";
+import ChatWindow from "../../components/chat/ChatWindow";
 
 function ChatPage() {
   return (

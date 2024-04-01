@@ -1,4 +1,4 @@
-import axios from "../../shared/axios";
+import axios from "../shared/axios";
 
 const login = async (credentials) => {
   try {

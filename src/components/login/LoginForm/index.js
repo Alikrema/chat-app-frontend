@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import InputField from "./InputField";
-import Loader from "./Loader";
+import InputField from "../InputField";
+import Loader from "../../common/Loader";
 
 const LoginForm = ({ onLogin }) => {
   const [username, setUsername] = useState("");

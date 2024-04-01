@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LoginPage from "./components/Login";
-import ChatPage from "./components/ChatPage";
+import LoginPage from "./pages/login";
+import ChatPage from "./pages/chat";
 import "./App.css";
 import ProtectedRoute from "./shared/protected-route";
 import AuthStateListener from "./state/auth-listener";
