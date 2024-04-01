@@ -1,0 +1,7 @@
+.messageItem {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #e7e7e7;
+  border-radius: 10px;
+  display: inline-block;
+}
