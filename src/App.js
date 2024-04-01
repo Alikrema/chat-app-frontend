@@ -12,7 +12,7 @@ const { login, home } = routes;
 const AppContent = () => {
   return (
     <div className="appContainer">
-      <div className="app">
+      <div>
         <Routes>
           <Route path={login} element={<LoginPage />} />
           <Route

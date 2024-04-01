@@ -1,6 +1,9 @@
 import axios from "axios";
+import { config } from "../../config";
 
 const instance = axios.create();
+
+instance.defaults.baseURL = config.baseUrl;
 
 instance.interceptors.request.use(
   (config) => {

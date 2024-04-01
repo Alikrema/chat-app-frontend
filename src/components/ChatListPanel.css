@@ -7,3 +7,10 @@
 .chatItem:hover {
   background-color: #f0f0f0;
 }
+
+.chatListPanel {
+  flex: 0 0 250px;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+  padding: 10px;
+}

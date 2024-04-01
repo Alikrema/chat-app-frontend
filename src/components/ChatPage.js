@@ -1,7 +1,6 @@
 import React from "react";
 import ChatListPanel from "./ChatListPanel";
 import ChatWindow from "./ChatWindow";
-import "../App.css";
 
 function ChatPage() {
   return (

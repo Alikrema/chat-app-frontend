@@ -4,23 +4,23 @@ import InputField from "./InputField";
 import Loader from "./Loader";
 
 const LoginForm = ({ onLogin }) => {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const authStatus = useSelector((state) => state.auth.status);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onLogin({ email, password });
+    onLogin({ username, password });
   };
 
   return (
     <form onSubmit={handleSubmit} className="loginForm">
       <InputField
-        type="email"
-        id="email"
-        label="Email"
-        value={email}
-        onChange={setEmail}
+        type="text"
+        id="text"
+        label="Username"
+        value={username}
+        onChange={setUsername}
       />
       <InputField
         type="password"

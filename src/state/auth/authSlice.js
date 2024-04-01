@@ -1,15 +1,11 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { login, register } from "../../api/services/authServices";
 
 export const signIn = createAsyncThunk(
   "auth/signIn",
   async ({ username, password }, thunkAPI) => {
     try {
-      // Simulating an API call with a timeout
-      const user = await new Promise((resolve) => {
-        setTimeout(() => {
-          resolve({ id: "1", name: username });
-        }, 1000);
-      });
+      const user = await login({ username, password });
       return user;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);
