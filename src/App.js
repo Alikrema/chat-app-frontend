@@ -4,7 +4,7 @@ import LoginPage from "./pages/login";
 import ChatPage from "./pages/chat";
 import "./App.css";
 import ProtectedRoute from "./shared/protected-route";
-import AuthStateListener from "./state/auth-listener";
+import AuthStateListener from "./shared/auth-listener";
 import routes from "./shared/constants/routes";
 
 const { login, home } = routes;

@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ChatListPanel.css";
+import { useSelector } from "react-redux";
 
-function ChatListPanel() {
+function ChatListPanel({ getRooms, onSelectRoom }) {
   // Mock chats data
-  const chats = ["Chat 1", "Chat 2", "Chat 3"]; // This would be dynamic in a real app
+
+  const rooms = useSelector((state) => state.chatRooms.rooms);
+
+  useEffect(() => {
+    getRooms();
+  }, [getRooms]);
 
   return (
     <div className="chatListPanel">
-      {chats.map((chat, index) => (
-        <div key={index} className="chatItem">
-          {chat}
+      {rooms.map((chat, index) => (
+        <div
+          key={index}
+          className="chatItem"
+          onClick={() => onSelectRoom(chat.id)}
+        >
+          {chat.name}
         </div>
       ))}
     </div>

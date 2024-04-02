@@ -4,7 +4,7 @@ import MessageList from "../MessageList";
 import MessageEntry from "../MessageEntry";
 import "./ChatWindow.css";
 
-function ChatWindow() {
+function ChatWindow({ selectedRoomId }) {
   return (
     <div className="chatWindow">
       <ChatHeader />

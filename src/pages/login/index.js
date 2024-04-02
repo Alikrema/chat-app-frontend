@@ -14,7 +14,6 @@ function LoginPage() {
   const currentUser = useSelector((state) => state.auth.user);
   useEffect(() => {
     if (currentUser) {
-      console.log("currentUser", currentUser);
       navigate(home);
     }
   }, [currentUser, navigate]);

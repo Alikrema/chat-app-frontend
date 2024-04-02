@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setUser, clearUser, setLoading } from "../auth/authSlice";
+import { setUser, clearUser, setLoading } from "../../state/auth/authSlice";
 
 const AuthStateListener = ({ children }) => {
   const dispatch = useDispatch();
