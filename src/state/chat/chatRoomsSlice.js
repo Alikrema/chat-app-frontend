@@ -36,15 +36,18 @@ const chatRoomsSlice = createSlice({
       .addCase(getRooms.pending, (state) => {
         state.status = "loading";
         state.error = null;
+        state.loading = true;
       })
       .addCase(getRooms.fulfilled, (state, action) => {
         state.status = "succeeded";
         state.rooms = action.payload;
         state.error = null;
+        state.loading = false;
       })
       .addCase(getRooms.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message;
+        state.loading = false;
       });
   },
 });

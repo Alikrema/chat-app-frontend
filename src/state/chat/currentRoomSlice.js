@@ -46,16 +46,19 @@ const currentRoomSlice = createSlice({
       .addCase(getRoomData.pending, (state) => {
         state.status = "loading";
         state.error = null;
+        state.loading = true;
       })
       .addCase(getRoomData.fulfilled, (state, action) => {
         state.status = "succeeded";
         state.room = action.payload.room;
         state.messages = action.payload.messages;
         state.error = null;
+        state.loading = false;
       })
       .addCase(getRoomData.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message;
+        state.loading = false;
       });
   },
 });

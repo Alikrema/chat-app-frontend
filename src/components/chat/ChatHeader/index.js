@@ -1,8 +1,8 @@
 import React from "react";
 import "./ChatHeader.css";
 
-function ChatHeader() {
-  return <div className="chatHeader">Chat Room Info</div>;
+function ChatHeader({ roomInfo }) {
+  return <div className="chatHeader">{roomInfo.name}</div>;
 }
 
 export default ChatHeader;

@@ -1,9 +1,7 @@
 import React from "react";
 import "./MessageList.css";
 
-function MessageList() {
-  const messages = ["Hello", "Hi there", "How are you?"]; // Mock messages
-
+function MessageList({ messages }) {
   return (
     <div className="messageList">
       {messages.map((msg, index) => (
