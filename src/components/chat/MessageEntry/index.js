@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 import "./MessageEntry.css";
 
-function MessageEntry() {
+function MessageEntry({ onSend }) {
   const [message, setMessage] = useState("");
 
   const handleMessageChange = (event) => {
     setMessage(event.target.value);
-  };
-
-  const handleSendMessage = () => {
-    console.log(message); // Here you would typically send the message to your server
-    setMessage(""); // Clear the input after sending
   };
 
   return (
@@ -21,7 +16,7 @@ function MessageEntry() {
         onChange={handleMessageChange}
         placeholder="Type a message..."
       />
-      <button onClick={handleSendMessage}>Send</button>
+      <button onClick={() => onSend(message)}>Send</button>
     </div>
   );
 }

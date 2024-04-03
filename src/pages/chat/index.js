@@ -1,13 +1,14 @@
 import React from "react";
 import ChatListPanel from "../../components/chat/ChatListPanel";
 import ChatWindow from "../../components/chat/ChatWindow";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getRooms } from "../../state/chat/chatRoomsSlice";
 
 function ChatPage() {
   const dispatch = useDispatch();
   const [selectedRoomId, setSelectedRoomId] = React.useState(null);
 
+  const user = useSelector((state) => state.auth.user);
   const getChatRooms = async () => {
     try {
       await dispatch(getRooms()).unwrap();
@@ -15,11 +16,11 @@ function ChatPage() {
       console.error(error);
     }
   };
-
+  //TODO:fix user.user issue
   return (
     <div className="app">
       <ChatListPanel getRooms={getChatRooms} onSelectRoom={setSelectedRoomId} />
-      <ChatWindow selectedRoomId={selectedRoomId} />
+      <ChatWindow selectedRoomId={selectedRoomId} user={user.user} />
     </div>
   );
 }

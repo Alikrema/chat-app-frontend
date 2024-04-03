@@ -5,11 +5,11 @@ export const signIn = createAsyncThunk(
   "auth/signIn",
   async ({ username, password }, thunkAPI) => {
     try {
-      const user = await login({ username, password });
-      const { token, ...rest } = user;
+      const userResponse = await login({ username, password });
+      const { token, ...rest } = userResponse;
       localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify(rest));
-      return user;
+      return userResponse.user;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);
     }
