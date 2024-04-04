@@ -4,14 +4,24 @@
   flex-direction: column;
 }
 
-.chatHeader,
-.messageEntry {
-  padding: 10px;
-  border-bottom: 1px solid #eee;
-}
-
 .messageList {
   flex: 1;
   overflow-y: auto;
   padding: 10px;
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.noRoomContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }

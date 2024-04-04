@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getRoomData, setMessages } from "../../../state/chat/currentRoomSlice";
 import socket from "../../../socket";
 import EVENTS from "../../../shared/constants/eventNames";
+import LoadingSpinner from "../../../shared/loading-spinner";
 
 function ChatWindow({ selectedRoomId, user }) {
   const dispatch = useDispatch();
@@ -67,11 +68,15 @@ function ChatWindow({ selectedRoomId, user }) {
   }, [roomMessages, dispatch]);
 
   if (!selectedRoomId) {
-    return <div className="chatWindow">Select a room</div>;
+    return <div className="noRoomContainer">Select a room</div>;
   }
 
   if (loading) {
-    return <div className="chatWindow">Loading...</div>;
+    return (
+      <div className="loadingContainer">
+        <LoadingSpinner />
+      </div>
+    );
   }
 
   return (

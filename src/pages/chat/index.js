@@ -3,6 +3,7 @@ import ChatListPanel from "../../components/chat/ChatListPanel";
 import ChatWindow from "../../components/chat/ChatWindow";
 import { useDispatch, useSelector } from "react-redux";
 import { getRooms } from "../../state/chat/chatRoomsSlice";
+import "./ChatPage.css";
 
 function ChatPage() {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ function ChatPage() {
   };
   //TODO:fix user.user issue
   return (
-    <div className="app">
+    <div className="chatContainer">
       <ChatListPanel getRooms={getChatRooms} onSelectRoom={setSelectedRoomId} />
       <ChatWindow selectedRoomId={selectedRoomId} user={user.user} />
     </div>

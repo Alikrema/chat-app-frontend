@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./ChatListPanel.css";
 import { useSelector } from "react-redux";
+import ChatPanelHeader from "../ChatPanelHeader";
 
 function ChatListPanel({ getRooms, onSelectRoom }) {
   // Mock chats data
@@ -17,6 +18,7 @@ function ChatListPanel({ getRooms, onSelectRoom }) {
   }
   return (
     <div className="chatListPanel">
+      <ChatPanelHeader />
       {rooms.map((chat, index) => (
         <div
           key={index}

@@ -1,7 +1,7 @@
 .chatItem {
   padding: 10px;
   cursor: pointer;
-  border-bottom: 1px solid #eee;
+  border-radius: 1rem;
 }
 
 .chatItem:hover {

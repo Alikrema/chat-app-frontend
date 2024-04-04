@@ -1,0 +1,30 @@
+.chatPanelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 5px;
+}
+
+.headerTitle {
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 10px;
+}
+
+.headerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+  background-color: #f0f0f0; /* Or any color you prefer */
+  border-radius: 50%; /* This creates the circle shape */
+}
+
+/* Optional: Adjust the icon size and color if needed */
+.headerButton .svg-inline--fa {
+  color: rgb(0, 0, 0); /* Or any color you prefer */
+  font-size: 15px; /* Adjust size as needed */
+}
