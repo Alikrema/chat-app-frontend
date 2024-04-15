@@ -9,7 +9,7 @@
 }
 
 .chatListPanel {
-  flex: 0 0 250px;
+  flex: 0 0 350px;
   overflow-y: auto;
   border-right: 1px solid #ccc;
   padding: 10px;

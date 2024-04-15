@@ -21,6 +21,11 @@
   height: 30px; /* Adjust size as needed */
   background-color: #f0f0f0; /* Or any color you prefer */
   border-radius: 50%; /* This creates the circle shape */
+  cursor: pointer;
+}
+
+.headerButton:hover {
+  background-color: #cecaca; /* Or any color you prefer */
 }
 
 /* Optional: Adjust the icon size and color if needed */
